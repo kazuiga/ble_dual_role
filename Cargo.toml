@@ -1,0 +1,18 @@
+[package]
+name = "ble_dual_role"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ble-peripheral-rust = "0.2"
+btleplug = "0.11"
+anyhow = "1"
+clap = { version = "4", features = ["derive", "string"] }
+tokio = { version = "1", features = ["full"] }
+
+[profile.release]
+panic = "abort"
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
