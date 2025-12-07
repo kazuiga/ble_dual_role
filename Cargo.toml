@@ -3,12 +3,18 @@ name = "ble_dual_role"
 version = "0.1.0"
 edition = "2024"
 
+
 [dependencies]
 ble-peripheral-rust = "0.2"
 btleplug = "0.11"
 anyhow = "1"
+uuid = "1"
+log = "0.4"
+env_logger = "0.11"
+rand = "0.9"
 clap = { version = "4", features = ["derive", "string"] }
 tokio = { version = "1", features = ["full"] }
+
 
 [profile.release]
 panic = "abort"
